@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+</head>
+<body class="m-0 p-0 bg-white">
+
+    <header class="container mx-auto my-[16px] ">
+        <div class="flex justify-between items-center p-[10px] pb-[16px] border-b-[1px]">
+            <div ><img class="w-[160px] h-[32px]" src="logo.png" alt="PH Tube"></div>
+            <div class=""><button onclick="sortViews()" class="px-[15px] py-[4px] rounded font-semibold bg-gray-400">Sort by view</button></div>
+            <div class=""><button onclick="blog.showModal()" id="Blog" class="px-[15px] py-[4px] rounded font-semibold bg-red-500">Blog</button></div>
+        </div> 
+
+        <!-- navigation bar -->
+        <div class="my-[16px]">
+            <div class="flex w-[400px] justify-between mx-auto">
+                <div class=""><button onclick="All()" class="px-[15px] py-[4px] rounded  bg-gray-300">All</button></div>
+                <div class=""><button onclick='music()' class=" px-[15px] py-[4px] rounded  bg-gray-300 ">Music</button></div>
+                <div class=""><button onclick="comedy()" class="px-[15px] py-[4px] rounded  bg-gray-300">Comedy</button></div>
+                <div class=""><button onclick="drawing()" class="px-[15px] py-[4px] rounded  bg-gray-300">Drawing</button></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-[22px]">
+        <section class="container">
+            <div id="mainContainer" class="grid grid-flow-row  grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+            <div id="NoitemsAvailable"></div>
+        </section>
+
+    <!-- blog contain div -->
+    <dialog id="blog" class="modal">
+    <div class="modal-box">
+        <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <div>
+            <section>
+                <h3 class="font-bold text-lg">(1).Discussion below the scope of var, let, and const.</h3>
+                <ul class="list-disc list-inside">
+                    <li>Use <span class="font-bold">var</span> when you need function-scoped variables or when working with older codebases.</li>
+                    <li>Use <span class="font-bold">let</span> when you need block-scoped variables that can be reassigned.</li>
+                    <li>Use <span class="font-bold">const</span> when you need block-scoped variables that should not be reassigned. This is especially useful for declaring constants or values that should remain unchanged throughout the scope.</li>
+                </ul>
+            </section>
+    
+        <section>
+            <h3 class="font-bold text-lg">(2).Discussion below  the use cases of null and undefined.</h3>
+            <ul class="list-disc list-inside">
+                <li>Use <span class="font-bold">undefined</span> when you want to indicate that a variable or property has not been assigned a value.</li>
+                <li>Use <span class="font-bold">null</span> when you want to explicitly represent the absence of a value or when you want to clear a value from a variable or object property.</li>
+                <li>Be cautious when working with these values, as unexpected usage can lead to bugs in your code. It's important to understand when and why to use them appropriately.</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h3 class="font-bold text-lg">(3).What do you mean by REST API?</h3>
+            <ul class="list-disc list-inside">
+                <li>REST APIs are widely used for building web services due to their simplicity, scalability, and compatibility with the HTTP protocol, making them accessible from a variety of platforms and programming languages. They are commonly employed in web applications, mobile apps, and microservices architectures for data exchange and integration between different systems.</li>
+            </ul>
+        </section>            
+        </div>
+    </div>
+    </dialog>
+    
+
+
+    </main>
+
+    
+
+    <script src="phtube.js"></script>
+</body>
+</html>
